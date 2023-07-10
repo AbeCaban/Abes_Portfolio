@@ -30,16 +30,30 @@ public class Practice
 
 
 {
-    public static void main(String[] args)
-    {
-      System.out.println("a    a^2    a^3");
-      System.out.println(1+"     "+1+"     "+1);
-      System.out.println(2+"     "+4+"     "+8);
-      System.out.println(3+"     "+9+"     "+27);
-      System.out.println(4+"     "+16+"    "+64);
 
-      System.out.println(((9.5 * 4.5) - (2.5 * 3)) / (45.5 - 3.5));
-      System.out.println();
+  public static void main(String[] args) {
+    
+    String a = "Release Manager";
+    String b = "Developer 1";
+    String c = "Developer 2";
+    String d = "Developer 3";
+
+    String[] names = {"abe","isaac","bethany","oscar"};
+
+    String[] roles = {a,b,c,d};
+
+    
+
+    // public static void main(String[] args)
+    // {
+    //   System.out.println("a    a^2    a^3");
+    //   System.out.println(1+"     "+1+"     "+1);
+    //   System.out.println(2+"     "+4+"     "+8);
+    //   System.out.println(3+"     "+9+"     "+27);
+    //   System.out.println(4+"     "+16+"    "+64);
+
+    //   System.out.println(((9.5 * 4.5) - (2.5 * 3)) / (45.5 - 3.5));
+    //   System.out.println();
 
 
       // Point blank;
