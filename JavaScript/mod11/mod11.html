@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Module 11 assignment.</title>
+    <style>
+        body{
+            background-image: url("picturesMod11/bBW.png");
+            /* Art found in https://wallpapercave.com/black-and-white-art-wallpapers */
+        }
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .box {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.712);
+            padding: 20px;
+            background-color: #e9e8c9;
+        }
+
+        #Title{
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.712);
+            padding: 20px;
+            background-color: #e9e8c9;
+        }
+
+        #vehicles {
+            text-align: center;
+        }
+
+        #pros-cons {
+            display: none;
+            
+        }
+        #FirstPicture{
+            width: 400px;
+            height: auto;
+        }
+        #SecondPicture{
+            width: 400px;
+            height: auto;
+        }
+        #ThirdPicture{
+            width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id = "Title">
+        <h1 style="text-align: center;">The pros and cons of Motorcycle, Car, and EV</h1>
+        <h2 style="text-align: center;">Pleased select a vehicle to review.</h2>
+    </div>
+    
+
+    <div id="container">
+        <div id="vehicles" class="box">
+            <h2>Vehicles</h2>
+            <img id="FirstPicture" src="picturesMod11/motorcycle.jpg" onclick="showProsCons('Motorcycle')" alt="Motorcycle">
+            <img id="SecondPicture" src="picturesMod11/car.jpg" onclick="showProsCons('Car')" alt="Car">
+            <img id="ThirdPicture" src="picturesMod11/ev.jpg" onclick="showProsCons('EV')" alt="EV">
+        </div>
+
+        <div id="pros-cons" class="box">
+            <h2 id="vehicleType"></h2>
+            <ul id="pros-cons-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        function showProsCons(vehicle) {
+            let c = "Car"
+            let m = "Motorcycle"
+            let e = "EV (Electric Vehicle)"
+            let p = "Pros"
+            let con = "Cons"
+            var prosConsDiv = document.getElementById("pros-cons");
+            var vclType = document.getElementById("vehicleType");
+            var prosConsList = document.getElementById("pros-cons-list");
+
+            function elentsList(pr, cn) {
+                var newElementPro = document.createElement("h3");
+                newElementPro.textContent = "Pro";
+                prosConsList.appendChild(newElementPro);
+                for (var i = 0; i < pr.length; i++) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = pr[i];
+                    prosConsList.appendChild(listItem);
+                }
+                var newElementCon = document.createElement("h3");
+                newElementCon.textContent = "Con";
+                prosConsList.appendChild(newElementCon)
+                for (var i = 0; i < cn.length; i++) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = cn[i];
+                    prosConsList.appendChild(listItem);
+                }
+                
+            }
+            prosConsList.innerHTML = "";
+
+            if (vehicle === "Motorcycle") {
+                vclType.innerHTML = m;
+                var pros = ["Fuel-efficient", "Easy maneuverability", "Lower initial cost", "Fun and exhilarating riding experience", "Easier to find parking spaces",
+                            "Lower insurance premiums", "Lower maintenance costs", "Can navigate through traffic more easily", "Smaller carbon footprint", 
+                            "Greater sense of freedom and connection with the road"];
+                var cons = ["Less storage space",  "Less protection in accidents", "Weather exposure (rain, wind, etc.)", 
+                            "Limited passenger capacity",  "Requires more skill and focus to ride",  "Less stable on uneven or slippery surfaces",
+                             "Limited suitability for long-distance travel",  "Increased vulnerability to theft",  "Noise and vibration can be tiring on longer rides",  
+                             "Limited availability of charging infrastructure for electric motorcycles"];
+                elentsList(pros, cons)
+            } else if (vehicle === "Car") {
+                vclType.innerHTML = c;
+                var pros = [ "More passenger capacity",  "Better protection in accidents","Weather protection (sheltered from rain, wind, etc.)",  "Comfortable and spacious interiors", 
+                            "Suitable for families and transporting goods",  "More storage space",  "Longer range for travel",  "More advanced safety features",  
+                            "Greater stability and traction on various road conditions",  "Availability of different models and customization options"];
+                var cons = [ "Higher fuel consumption",  "Higher maintenance costs", "Higher initial cost (purchase price and insurance)",  
+                            "Increased traffic congestion and difficulty finding parking",  "Higher emissions contributing to air pollution",  
+                            "Limited maneuverability in tight spaces or heavy traffic",  "Depreciation in value over time",  "Requires a valid driver's license and adherence to traffic regulations", 
+                            "Increased reliance on fossil fuels (for non-electric cars)",  "Environmental impact during manufacturing and disposal of cars"];
+                elentsList(pros, cons)
+            } else if (vehicle === "EV") {
+                vclType.innerHTML = e;
+                var pros = ["Environmentally friendly (zero emissions)", "Lower fuel costs (electricity is cheaper than gasoline)",  "Reduced maintenance requirements (fewer moving parts)",
+                            "Access to preferential parking and charging stations",  "Government incentives and tax credits for EV owners",  "Quieter operation and reduced noise pollution", 
+                            "Instant torque and smooth acceleration",  "Regenerative braking for energy recapture",  "Advanced technology and features", 
+                            "Potential for integration with renewable energy sources"];
+                var cons = ["Limited charging infrastructure, especially in remote areas", "Limited range compared to traditional gasoline vehicles",  
+                            "Longer refueling time (charging takes longer than filling up with gasoline)",  "Higher initial cost (purchase price of EVs is often higher)", 
+                            "Battery degradation over time, affecting range and performance",  "Limited availability of certain vehicle types or models",  
+                            "Potential range anxiety (concerns about running out of charge)",  "Production and disposal of batteries have environmental impacts",  
+                            "Limited towing capacity for some EV models",  "Dependency on electricity grid stability and availability"];
+                elentsList(pros, cons)
+            }
+
+            
+            prosConsDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>

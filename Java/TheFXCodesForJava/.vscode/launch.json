@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AbrahamThreeThreads",
+            "request": "launch",
+            "mainClass": "hellofxTwo.AbrahamThreeThreads",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "AbeJavaFXCircles",
+            "request": "launch",
+            "mainClass": "AbeModule7.AbeJavaFXCircles",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "MyJavaFx",
+            "request": "launch",
+            "mainClass": "hellofxTwo.MyJavaFx",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "AbrahamShapesWColors",
+            "request": "launch",
+            "mainClass": "hellofxTwo.AbrahamShapesWColors",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "AbrahamFourRandomCards",
+            "request": "launch",
+            "mainClass": "hellofxTwo.AbrahamFourRandomCards",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AbrahamFourCards",
+            "request": "launch",
+            "mainClass": "hellofxTwo.AbrahamFourCards",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "MainTwo",
+            "request": "launch",
+            "mainClass": "hellofxTwo.MainTwo",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Module7FXAssign",
+            "request": "launch",
+            "mainClass": "hellofxTwo.Module7FXAssign",
+            "projectName": "TheFXCodesForJava_f70fddea",
+            "vmArgs": "--module-path \"C:/Users/Lezir/Downloads/openjfx-19.0.2.1_windows-x64_bin-sdk/javafx-sdk-19.0.2.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

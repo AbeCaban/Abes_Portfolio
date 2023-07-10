@@ -1,0 +1,15 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "TheFXCodesForJava/lib/javafx.base.jar",
+            "TheFXCodesForJava/lib/javafx.controls.jar",
+            "TheFXCodesForJava/lib/javafx.fxml.jar",
+            "TheFXCodesForJava/lib/javafx.graphics.jar",
+            "TheFXCodesForJava/lib/javafx.media.jar",
+            "TheFXCodesForJava/lib/javafx.swing.jar",
+            "TheFXCodesForJava/lib/javafx.web.jar",
+            "TheFXCodesForJava/lib/javafx-swt.jar"
+        ]
+    }
+}

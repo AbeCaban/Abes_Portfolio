@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Best of DC and Marvel</title>
+        <style>
+            #background {
+                background-image: url('comics-n-stuff.png');
+                background-size: cover; 
+            }
+            h1 {
+                text-align: center;
+                font-size: 50px;
+                color: rgb(238, 131, 9);
+                text-shadow: 2px 2px black;
+            }
+            h2 {
+                text-align: center;
+                font-size: 50px;
+                color: rgb(238, 131, 9);
+                text-shadow: 2px 2px black;
+            }
+            
+            .red-hood {
+                color: blue;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            
+            .hulk {
+                color: purple;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 10px;
+
+            }
+
+            #paragraphone{
+                background-color: rgba(248, 177, 71, 0.596);
+                border: 1px solid #9c44ac ;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                margin: 5PX;
+                padding: 5px;
+            }
+            #paragraphtwo{
+                background-color: rgba(248, 177, 71, 0.596);
+                border: 1px solid #9c44ac ;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                margin: 5PX;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body id = "background">
+        
+            <h1>The Best of DC and Marvel</h1>
+            <h2>Hover over the names</h2>
+            <div class = "container">
+                <p id = "paragraphone">
+                    The <span class="hulk">Hulk</span> is a fictional superhero appearing in publications by 
+                    Marvel Comics. Created by writer Stan Lee and artist Jack Kirby, 
+                    the character first appeared in the debut issue of The Incredible <span class="hulk">Hulk</span>.
+                    The <span class="hulk">Hulk</span> possesses incredible strength and his alter ego Dr. 
+                    Bruce Banner is a genius in nuclear physics. Whenever Banner gets 
+                    angry, he transforms into the <span class="hulk">Hulk</span>, a green-skinned creature with 
+                    immense strength and durability.
+                </p>
+                <p id = "paragraphtwo">
+                    <span class="red-hood">Red Hood</span> is a vigilante anti-hero who has been a member of and 
+                    antagonist to the Batman Family. He is the alter-ego of Jason Todd, 
+                    a former Robin who was brutally murdered by the Joker. Todd was 
+                    later resurrected and became the <span class="red-hood">Red Hood</span>, taking on a more violent 
+                    and lethal approach to crime-fighting than Batman. He is known for 
+                    his mastery of multiple forms of combat and his signature red helmet.
+                </p>
+            </div>
+            <script>
+
+                const redHoodNames = document.getElementsByClassName('red-hood');
+                const hulkNames = document.getElementsByClassName('hulk');
+                const body = document.getElementsByTagName('body')[0];
+
+                for(let i = 0; i < redHoodNames.length; i++) {
+                    redHoodNames[i].addEventListener('mouseover', function() {
+                    body.style.backgroundImage = "url('red-hood.png')";
+                    this.style.color = "red";
+                    });
+                    
+                    redHoodNames[i].addEventListener('mouseout', function() {
+                    body.style.backgroundImage = "url('comics-n-stuff.png')";
+                    this.style.color = "blue";
+                    });
+                }
+                
+                for(let i = 0; i < hulkNames.length; i++) {
+                    hulkNames[i].addEventListener('mouseover', function() {
+                    body.style.backgroundImage = "url('hulk.png')";
+                    this.style.color = "green";
+                    });
+                    
+                    hulkNames[i].addEventListener('mouseout', function() {
+                    body.style.backgroundImage = "url('comics-n-stuff.png')";
+                    this.style.color = "purple";
+                    });
+            }
+            </script>
+        
+    </body>
+</html>

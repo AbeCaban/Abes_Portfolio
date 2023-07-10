@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Of Numbers</title>
+  </head>
+  <body>
+    <h1>Enter the Numbers so we can show u the array.</h1>
+    <input id="numberInput" type="number">
+    <button onclick="enteringNumInArray()">Enter Number</button><br/>
+    <ul id="textOutPut" type="text"></ul>
+    <button onclick="lastArray()">done</button>
+    <script>
+        const numberInput = document.getElementById("numberInput");
+        const numbersList = document.getElementById("textOutPut");
+
+        const arrNeg = [];
+        const arrZero = [];
+        const arrPos = [];
+
+        function enteringNumInArray() {
+          const number = parseFloat(numberInput.value);
+          if (isNaN(number)) {
+            numbersList.innerHTML = "You entered a letter or pressed ok without a value. This was an invalid input.<br>";
+            return;
+          }
+          if (number > 0) {
+            arrPos.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          } else if (number === 0) {
+            arrZero.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          } else {
+            arrNeg.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          }
+          numberInput.value = '';
+        }
+
+        function counter(arr1, arr2, arr3) { 
+          const arrAllNum = arr1.concat(arr2, arr3);
+          let negativeCount = 0;
+          let zeroCount = 0;
+          let positiveCount = 0;
+
+          for (let i = 0; i < arrAllNum.length; i++) {
+            if (arrAllNum[i] < 0) {
+              negativeCount++;
+            } else if (arrAllNum[i] === 0) {
+              zeroCount++;
+            } else {
+              positiveCount++;
+            }
+          }
+
+          return [negativeCount, zeroCount, positiveCount];
+        }
+
+        function lastArray(){
+          const allNumbers = counter(arrNeg, arrZero, arrPos);
+          const outputElement = document.createElement("p");
+          outputElement.innerHTML = `The Array of all numbers is [${arrNeg}, ${arrZero}, ${arrPos}].<br>There are ${allNumbers[0]} negative numbers, ${allNumbers[1]} zeros, and ${allNumbers[2]} positive numbers in the array.`;
+          document.body.appendChild(outputElement);
+        }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Of Numbers</title>
+  </head>
+  <body>
+    <h1>Enter the Numbers for the array.</h1><br>
+    <h1>After entering the number pres enter.</h1><br>
+    <input id="numberInput" type="number" onkeydown="if(event.keyCode==13) enteringNumInArray()">
+    <ul id="textOutPut" type="text"></ul>
+    <button onclick="lastArray()">done</button>
+    <script>
+        const numberInput = document.getElementById("numberInput");
+        const numbersList = document.getElementById("textOutPut");
+
+        const arrNeg = [];
+        const arrZero = [];
+        const arrPos = [];
+
+        function enteringNumInArray() {
+          const number = parseFloat(numberInput.value);
+          if (isNaN(number)) {
+            numbersList.innerHTML = "You entered a letter or pressed ok without a value. This was an invalid input.<br>";
+            return;
+          }
+          if (number > 0) {
+            arrPos.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          } else if (number === 0) {
+            arrZero.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          } else {
+            arrNeg.push(number);
+            numbersList.innerHTML += `You entered the number ${number}.<br>`;
+          }
+          numberInput.value = '';
+        }
+
+        function counter(arr1, arr2, arr3) { 
+          const arrAllNum = arr1.concat(arr2, arr3);
+          let negativeCount = 0;
+          let zeroCount = 0;
+          let positiveCount = 0;
+
+          for (let i = 0; i < arrAllNum.length; i++) {
+            if (arrAllNum[i] < 0) {
+              negativeCount++;
+            } else if (arrAllNum[i] === 0) {
+              zeroCount++;
+            } else {
+              positiveCount++;
+            }
+          }
+
+          return [negativeCount, zeroCount, positiveCount];
+        }
+
+        function lastArray(){
+          const allNumbers = counter(arrNeg, arrZero, arrPos);
+          const outputElement = document.createElement("p");
+          outputElement.innerHTML = `The Array of all numbers is [${arrNeg}, ${arrZero}, ${arrPos}].<br>There are ${allNumbers[0]} negative numbers, ${allNumbers[1]} zeros, and ${allNumbers[2]} positive numbers in the array.`;
+          document.body.appendChild(outputElement);
+        }
+    </script>
+  </body>
+</html>

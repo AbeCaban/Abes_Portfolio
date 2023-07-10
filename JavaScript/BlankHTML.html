@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>The first 30 Fibonacci numbers</title>
+    </head>
+    <body>
+        <h1>The first 30 Fibonacci numbers</h1>
+        <script>
+            var counter = 1;
+            var firstvar = 1;
+            var temp = 1;
+
+            document.write(counter + " - " + firstvar + "<br />");
+            document.write((counter + 1) + " - " + (temp) + "<br />");
+            // temp = firstvar
+            // document.write(temp)
+            
+            for (counter = 3; counter <= 30; counter++){
+
+                var totalizer = firstvar + temp;
+                // firstvar += temp;
+                // for (firstvar = 2; counter <= 30; firstvar++) {
+                //     document.write(counter + " - " + firstvar + "<br />");
+                // }
+                document.write(counter + " - " + totalizer + "<br />");
+                // var totalizer = firstvar + temp;
+
+                firstvar = temp;
+                temp = totalizer;
+            }
+
+
+        </script>
+    </body>
+</html>
