@@ -4,10 +4,10 @@ import java.util.*;
 
 public class RandomRoleAssignment {
     public static void main(String[] args) {
-        String a = "Release Manager";
-        String b = "Developer 1";
-        String c = "Developer 2";
-        String d = "Developer 3";
+        String a = "Role 1";
+        String b = "Role 2";
+        String c = "Role 3";
+        String d = "Role 4";
 
         String[] names = {"student1", "studenbt2", "student3", "student4"};
         String[] roles = {a, b, c, d};
