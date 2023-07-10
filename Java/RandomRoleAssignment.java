@@ -9,7 +9,7 @@ public class RandomRoleAssignment {
         String c = "Developer 2";
         String d = "Developer 3";
 
-        String[] names = {"student1", "studenbt2", "student3", "studebnt4"};
+        String[] names = {"student1", "studenbt2", "student3", "student4"};
         String[] roles = {a, b, c, d};
 
         List<String> roleList = Arrays.asList(roles);
