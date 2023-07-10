@@ -32,14 +32,15 @@ public class Practice
 {
     public static void main(String[] args)
     {
+      System.out.println("a    a^2    a^3");
+      System.out.println(1+"     "+1+"     "+1);
+      System.out.println(2+"     "+4+"     "+8);
+      System.out.println(3+"     "+9+"     "+27);
+      System.out.println(4+"     "+16+"    "+64);
 
-      ArrayList<Integer> numbersAdded = new ArrayList<Integer>();
-        Random random = new Random();
-              for (int i = 1; i <= 10; i++) {
-                  numbersAdded.add(random.nextInt(101));
-              }
+      System.out.println(((9.5 * 4.5) - (2.5 * 3)) / (45.5 - 3.5));
+      System.out.println();
 
-              numbersAdded.forEach((n)-> System.out.print(n + " "));
 
       // Point blank;
       // blank = new Point(3, 4);
