@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "ImprovementTimer_ff9f75d6",
-            "vmArgs": "--module-path \"C:/Program Files/Javafx/javafx-sdk-22.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"c:/Program Files/Javafx/javafx-sdk-22.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
