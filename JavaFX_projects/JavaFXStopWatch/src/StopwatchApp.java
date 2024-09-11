@@ -55,13 +55,15 @@ public class StopwatchApp extends Application {
         primaryStage.show();
     }
 
-    // Helper method to format the time as mm:ss:SSS
-    private String formatTime(int milliseconds) {
-        int minutes = (milliseconds / 60000) % 60;
-        int seconds = (milliseconds / 1000) % 60;
-        int millis = milliseconds % 1000;
-        return String.format("%02d:%02d:%03d", minutes, seconds, millis);
-    }
+// Helper method to format the time as hh:mm:ss:SSS
+private String formatTime(int milliseconds) {
+    int hours = (milliseconds / 3600000) % 24; // Convert milliseconds to hours
+    int minutes = (milliseconds / 60000) % 60; // Convert milliseconds to minutes
+    int seconds = (milliseconds / 1000) % 60;  // Convert milliseconds to seconds
+    int millis = milliseconds % 1000;          // Remaining milliseconds
+    return String.format("%02d:%02d:%02d:%03d", hours, minutes, seconds, millis);
+}
+
 
     public static void main(String[] args) {
         launch(args);
