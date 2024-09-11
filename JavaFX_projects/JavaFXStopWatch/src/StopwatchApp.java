@@ -1,6 +1,8 @@
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -42,11 +44,14 @@ public class StopwatchApp extends Application {
 
         // Layout
         HBox buttonBox = new HBox(10, startButton, stopButton, resetButton);
+        buttonBox.setAlignment(Pos.CENTER); // Align buttons to the center
         VBox vbox = new VBox(20, timeLabel, buttonBox);
+        vbox.setPadding(new Insets(20)); // Add padding around the VBox
+        vbox.setAlignment(Pos.TOP_CENTER); // Align the VBox elements to the top center
 
         Scene scene = new Scene(vbox, 300, 200);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Stopwatch Example");
+        primaryStage.setTitle("Stopwatch");
         primaryStage.show();
     }
 
