@@ -11,8 +11,9 @@ print("Python is " + x)
 q = 'bull'
 
 def m_f_f():
-    global q
-    q = 'shit'
+  global q
+  q = 'bullshit'
 
 m_f_f()
-print('pythonis'+ q)
+
+print('i dont get why i am having problems whith the code in W3Schools. this is ' + q)
