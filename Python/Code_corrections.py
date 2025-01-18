@@ -1,19 +1,55 @@
-x = "awesome"
+x = 'blaaah'
 
-def myfunc():
-  global x
-  x = "fantastic"
+print(type(x))
 
-myfunc()
+x = 34
 
-print("Python is " + x)
+print(type(x))
 
-q = 'bull'
+x = 4.4
 
-def m_f_f():
-  global q
-  q = 'bullshit'
+print(type(x))
 
-m_f_f()
+x = 1j
 
-print('i dont get why i am having problems whith the code in W3Schools. this is ' + q)
+print(type(x))
+
+x = ['bull','shit','time']
+
+print(type(x))
+
+x = ('bull', 'shit', 'time')
+
+print(type(x))
+
+x = range(8)
+
+print(type(x))
+
+x = {'bull':3, 'shit':4, 'time':4}
+
+print(type(x))
+
+frozenset({'bull', 'shit', 'time'})
+
+print(type(x))
+
+x = True
+
+print(type(x))
+
+x = b"shit"
+
+print(type(x))
+
+x = bytearray(5)
+
+print(type(x))
+
+x = memoryview(bytes(5))
+
+print(type(x))
+
+x = None
+
+print(type(x))
