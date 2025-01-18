@@ -1,3 +1,5 @@
+import random
+
 x = 'blaaah'
 
 print(type(x))
@@ -53,3 +55,5 @@ print(type(x))
 x = None
 
 print(type(x))
+
+print(random.randrange(1,15))
