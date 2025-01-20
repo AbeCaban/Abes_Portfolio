@@ -1,13 +1,10 @@
-a = "Hello, World!"
-print(a[1])
+def word_in_srting_check():
+    word = input("Enter a word: ")
+    string = input("Enter a string: ")
+    if word in string:
+        print("True")
+    else:
+        print("False")
 
-a = "again with this baaah"
+word_in_srting_check()
 
-print(a[7])
-
-for x in a:
-    print(x)
-
-if "this" in a :
-    print ("Yes, 'this' is in the string")
-    
