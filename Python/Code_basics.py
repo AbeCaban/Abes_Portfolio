@@ -1,11 +1,7 @@
-def word_in_srting_check():
-    word = input("Enter a word: ")
-    string = input("Enter a string: ")
-    count = string.count(word)
-    if word in string:
-        print(f"True, {word} is in the sting provided {count} times")
-    else:
-        print("False")
+game_list = ['no mans sky', 'shit', 'blash']
+for game in game_list:
+    print(game)
 
-word_in_srting_check()
-
+print(game_list[1:])
+print(game_list[:2])
+print(game_list[1:2])
