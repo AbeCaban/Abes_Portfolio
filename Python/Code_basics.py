@@ -1,7 +1,3 @@
-game_list = ['no mans sky', 'shit', 'blash']
-for game in game_list:
-    print(game)
-
-print(game_list[1:])
-print(game_list[:2])
-print(game_list[1:2])
+another_game_list= ['nomans sky', 'zelda', 'boomberman', 'vrising', 'vixens']
+another_game_list[1:3] = ['zelda 2', 'zelda 3']
+print(another_game_list)
