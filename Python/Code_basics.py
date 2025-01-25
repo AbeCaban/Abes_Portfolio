@@ -18,7 +18,7 @@
 # 6. Implement a recovery timer that:
 #     - Adds `mana_recovery_rate` to `total_mana` every second.
 #     - asyncio: Ideal for asynchronous programs with multiple tasks running concurrently.
-        #import asyncio
+        #import asyncio asyncio: Ideal for asynchronous programs with multiple tasks running concurrently.
 
 # async def perform_action():
 #     while True:
