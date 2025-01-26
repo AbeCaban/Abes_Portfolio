@@ -41,16 +41,21 @@ mana_available = ['blue10', 'blue20', 'blue30', 'blue40', 'blue50', 'blue60', 'b
 mana_lost = []
 mana_recovery_rate = 1
 mana = None
-while imput("Do you want to play? (y/n) ") == 'y':
-    if mana_available is not None:
-        imput("Press a key to spend mana.")
-        mana =
-        mana_spent = mana_available.pop(9)
-        mana_lost.append(mana_spent)
-        print(f"You spent {mana_spent} mana.")
-        print(f"You have {len(mana_available)} mana left.")
+
+ 
+while input("Do you want to play? (y/n) ") == 'y':
+    if input() != "q":
+        if mana_available is not None:
+            input("Press a key to spend mana.")
+            # mana = f"blue{10*(len(mana_available))}"
+            mana_spent = mana_available.pop(-1)
+            mana_lost.append(mana_spent)
+            print(f"You spent {mana_spent} mana.")
+            print(f"You have {len(mana_available)} mana left.")
+        else:
+            print("You have no mana left.")
     else:
-        print("You have no mana left.")
+        break
 
 
 
