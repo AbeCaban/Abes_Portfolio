@@ -34,7 +34,7 @@
 # # Flow loop
 # 7. Repeat the key-press action and recovery process.
 import asyncio
-import keyboard
+# import keyboard
 
 mana_available = ['blue10', 'blue20', 'blue30', 'blue40', 'blue50', 'blue60', 'blue70', 'blue80', 'blue90', 'blue100']
 
@@ -42,8 +42,11 @@ mana_lost = []
 mana_recovery_rate = 1
 mana = None
 
+
+if len(mana_available) < 10:
+    mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
  
-while input("Do you want to play? (y/n) ") == 'y':
+while input("press akey to spend mana or q to quit."):
     if input() != "q":
         if mana_available is not None:
             input("Press a key to spend mana.")
@@ -102,3 +105,40 @@ async def main():
 # Run the program
 asyncio.run(main())
 '''
+# another  similar code
+
+'''# Mana recovery function
+async def recover_mana():
+    while True:
+        await asyncio.sleep(1)  # Wait for 1 second
+        if len(mana_available) < 10:
+            mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
+            print(f"Mana recovered: {mana_available[-1]}")
+        else:
+            print("Mana is full.")
+
+# Gameplay function
+async def play_game():
+    while input("Do you want to play? (y/n) ") == 'y':
+        if input("Press 'q' to quit or any other key to spend mana: ") != 'q':
+            if mana_available:
+                input("Press Enter to spend mana.")
+                mana_spent = mana_available.pop(-1)  # Spend the highest mana
+                mana_lost.append(mana_spent)
+                print(f"You spent {mana_spent} mana.")
+                print(f"You have {len(mana_available)} mana left.")
+            else:
+                print("You have no mana left.")
+        else:
+            print("Exiting game.")
+            break
+
+# Main function to run tasks concurrently
+async def main():
+    await asyncio.gather(
+        recover_mana(),  # Run mana recovery
+        play_game(),     # Run gameplay
+    )
+
+# Start the asyncio event loop
+asyncio.run(main())'''
