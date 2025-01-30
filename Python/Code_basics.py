@@ -54,14 +54,16 @@ while True:
         if event.name == 'q':
             print('Exiting Spell Casting')
             break
-        elif mana_available:
+        elif mana_available>=1:
             input("Press a key to spend mana.")
             mana_spent = mana_available.pop(-1)
             mana_lost.append(mana_spent)
             print(f"You spent {mana_spent} mana.")
             print(f"You have {len(mana_available)} mana left.")
-        else:
-            print("You have no mana left.")
+        elif len(mana_available) < 10:
+            mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
+            
+            # print("You have no mana left.")
 
 
 
