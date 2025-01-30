@@ -45,6 +45,7 @@ mana = None
 
 if len(mana_available) < 10:
     mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
+    
  
 while True:
     print("Press 'q' to quit or any other key to spend mana.")
