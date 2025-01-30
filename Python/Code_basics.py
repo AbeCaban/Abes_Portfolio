@@ -34,7 +34,7 @@
 # # Flow loop
 # 7. Repeat the key-press action and recovery process.
 import asyncio
-import keyboard # type: ignore
+import keyboard
 
 mana_available = ['blue10', 'blue20', 'blue30', 'blue40', 'blue50', 'blue60', 'blue70', 'blue80', 'blue90', 'blue100']
 
@@ -42,26 +42,24 @@ mana_lost = []
 mana_recovery_rate = 1
 mana = None
 
-
-if len(mana_available) < 10:
-    mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
     
  
 while True:
     print("Press 'q' to quit or any other key to spend mana.")
-    event = keyboard.read_event()
+    event = keyboard.read_event(suppress=True)
     if event.event_type == 'down':
         if event.name == 'q':
             print('Exiting Spell Casting')
             break
-        elif mana_available>=1:
+        elif len(mana_available) > 0:
             input("Press a key to spend mana.")
             mana_spent = mana_available.pop(-1)
             mana_lost.append(mana_spent)
             print(f"You spent {mana_spent} mana.")
             print(f"You have {len(mana_available)} mana left.")
         elif len(mana_available) < 10:
-            mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
+            while len(mana_available) < 10:
+             mana_available.append(f"blue{10 * (len(mana_available) + 1)}")
             
             # print("You have no mana left.")
 
