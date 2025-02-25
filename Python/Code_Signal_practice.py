@@ -68,29 +68,46 @@
 # print(exclusive_products(inventory1, inventory2))
 # # Expected output: ([], ['COAT', 'DRESS', 'SKIRT'])
 
-def find_unique_string(words):
-    # implement this
+# def find_unique_string(words):
+#     # implement this
     
-    single_words = set()
-    repeated_words = set()
-    for word in words:
-        if word in single_words:
-            repeated_words.add(word)
-        else:
-            single_words.add(word)
-    unique_words_in_set = single_words - repeated_words
+#     single_words = set()
+#     repeated_words = set()
+#     for word in words:
+#         if word in single_words:
+#             repeated_words.add(word)
+#         else:
+#             single_words.add(word)
+#     unique_words_in_set = single_words - repeated_words
     
-    unique_words_in_list = list(unique_words_in_set)
+#     unique_words_in_list = list(unique_words_in_set)
     
-    if not unique_words_in_list:
-        unique_words_in_list.append('')
+#     if not unique_words_in_list:
+#         unique_words_in_list.append('')
     
-    final_result = ", ".join([f"'{item}'" for item in unique_words_in_list])
+#     final_result = ", ".join([f"'{item}'" for item in unique_words_in_list])
             
-    return final_result
+#     return final_result
     
 
-print(find_unique_string(['apple', 'banana', 'apple', 'mango', 'banana']))  # It should print: 'mango' 'pineapple
-print(find_unique_string(['hello', 'world', 'hello']))  # It should print: 'world' 'pineapple
-print(find_unique_string(['hello', 'world', 'hello', 'world']))  # It should print: ''
-print(find_unique_string([]))  # It should print: ''
+# print(find_unique_string(['apple', 'banana', 'apple', 'mango', 'banana']))  # It should print: 'mango' 'pineapple
+# print(find_unique_string(['hello', 'world', 'hello']))  # It should print: 'world' 'pineapple
+# print(find_unique_string(['hello', 'world', 'hello', 'world']))  # It should print: ''
+# print(find_unique_string([]))  # It should print: ''
+
+def find_anagram_words(list_1, list_2):
+    # Normalize words to lowercase and sort them
+    def sorted_word(word):
+        return "".join(sorted(word.lower()))
+    
+    # Create a set of normalized words from list_2
+    anagram_signatures = {sorted_word(word) for word in list_2}
+    
+    # Find unique words in list_1 that have an anagram in list_2
+    result = {word for word in list_1 if sorted_word(word) in anagram_signatures}
+    
+    return list(result)
+
+print(find_anagram_words(['cinema', 'iceman'], ['iceman', 'cinema'])) # should return ['cinema', 'iceman']
+print(find_anagram_words(['test', 'stet'], ['tent', 'nett'])) # should return []
+print(find_anagram_words(['hello', 'world'], ['dolly', 'sir'])) # should return []
