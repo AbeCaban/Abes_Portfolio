@@ -95,19 +95,36 @@
 # print(find_unique_string(['hello', 'world', 'hello', 'world']))  # It should print: ''
 # print(find_unique_string([]))  # It should print: ''
 
-def find_anagram_words(list_1, list_2):
-    # Normalize words to lowercase and sort them
-    def sorted_word(word):
-        return "".join(sorted(word.lower()))
+# def find_anagram_words(list_1, list_2):
+#     # Normalize words to lowercase and sort them
+#     def sorted_word(word):
+#         return "".join(sorted(word.lower()))
     
-    # Create a set of normalized words from list_2
-    anagram_signatures = {sorted_word(word) for word in list_2}
+#     # Create a set of normalized words from list_2
+#     anagram_signatures = {sorted_word(word) for word in list_2}
     
-    # Find unique words in list_1 that have an anagram in list_2
-    result = {word for word in list_1 if sorted_word(word) in anagram_signatures}
+#     # Find unique words in list_1 that have an anagram in list_2
+#     result = {word for word in list_1 if sorted_word(word) in anagram_signatures}
     
-    return list(result)
+#     return list(result)
 
-print(find_anagram_words(['cinema', 'iceman'], ['iceman', 'cinema'])) # should return ['cinema', 'iceman']
-print(find_anagram_words(['test', 'stet'], ['tent', 'nett'])) # should return []
-print(find_anagram_words(['hello', 'world'], ['dolly', 'sir'])) # should return []
+# print(find_anagram_words(['cinema', 'iceman'], ['iceman', 'cinema'])) # should return ['cinema', 'iceman']
+# print(find_anagram_words(['test', 'stet'], ['tent', 'nett'])) # should return []
+# print(find_anagram_words(['hello', 'world'], ['dolly', 'sir'])) # should return []
+
+event_system = {}
+
+# Add upcoming events
+event_system[1] = "Coding Bootcamp - Monday, 8:00 AM"
+event_system[2] = "Python Webinar - Tuesday, 10:00 AM"
+event_system[3] = "Data Science Meetup - Wednesday, 6:00 PM"
+
+# TODO: Update the Python Webinar description
+# Note: don't change previous definitions of `event_system` elements.
+
+event_system[2] = "Python Webinar on Data Structures - Tuesday, 11:00 AM"
+
+# Print the updated events list
+print("\nUpdated upcoming events:")
+for event_id, event_desc in event_system.items():
+    print(f"Event ID: {event_id}, Description: {event_desc}")
