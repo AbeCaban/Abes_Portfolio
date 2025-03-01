@@ -112,19 +112,39 @@
 # print(find_anagram_words(['test', 'stet'], ['tent', 'nett'])) # should return []
 # print(find_anagram_words(['hello', 'world'], ['dolly', 'sir'])) # should return []
 
-event_system = {}
+# event_system = {}
 
-# Add upcoming events
-event_system[1] = "Coding Bootcamp - Monday, 8:00 AM"
-event_system[2] = "Python Webinar - Tuesday, 10:00 AM"
-event_system[3] = "Data Science Meetup - Wednesday, 6:00 PM"
+# # Add upcoming events
+# event_system[1] = "Coding Bootcamp - Monday, 8:00 AM"
+# event_system[2] = "Python Webinar - Tuesday, 10:00 AM"
+# event_system[3] = "Data Science Meetup - Wednesday, 6:00 PM"
 
-# TODO: Update the Python Webinar description
-# Note: don't change previous definitions of `event_system` elements.
+# # TODO: Update the Python Webinar description
+# # Note: don't change previous definitions of `event_system` elements.
 
-event_system[2] = "Python Webinar on Data Structures - Tuesday, 11:00 AM"
+# event_system[2] = "Python Webinar on Data Structures - Tuesday, 11:00 AM"
 
-# Print the updated events list
-print("\nUpdated upcoming events:")
-for event_id, event_desc in event_system.items():
-    print(f"Event ID: {event_id}, Description: {event_desc}")
+# # Print the updated events list
+# print("\nUpdated upcoming events:")
+# for event_id, event_desc in event_system.items():
+#     print(f"Event ID: {event_id}, Description: {event_desc}")
+
+# Initialize an empty dictionary as a Hash Table
+spacemail = {}
+
+# Let's populate with incoming messages
+spacemail['Station Alpha'] = 'Supply request: cosmic fuel'
+spacemail['Station Beta'] = 'Engineering report: engines operational'
+spacemail['Station Gamma'] = 'Medical report: crew status healthy'
+
+# Let's print the initial spacemail log
+print("Initial Spacemail Log:")
+for station, message in spacemail.items():
+    print(f"Station: {station}, Message: {message}")
+
+# TODO: Add a new message from Station Delta and verify the updated spacemail log
+spacemail["Station Delta"] = "The new messege for your email log"
+
+print("New Spacemail Log:")
+for station, message in spacemail.items():
+    print(f"Station: {station}, Message: {message}")
