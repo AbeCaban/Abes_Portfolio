@@ -130,21 +130,38 @@
 #     print(f"Event ID: {event_id}, Description: {event_desc}")
 
 # Initialize an empty dictionary as a Hash Table
-spacemail = {}
+# spacemail = {}
 
-# Let's populate with incoming messages
-spacemail['Station Alpha'] = 'Supply request: cosmic fuel'
-spacemail['Station Beta'] = 'Engineering report: engines operational'
-spacemail['Station Gamma'] = 'Medical report: crew status healthy'
+# # Let's populate with incoming messages
+# spacemail['Station Alpha'] = 'Supply request: cosmic fuel'
+# spacemail['Station Beta'] = 'Engineering report: engines operational'
+# spacemail['Station Gamma'] = 'Medical report: crew status healthy'
 
-# Let's print the initial spacemail log
-print("Initial Spacemail Log:")
-for station, message in spacemail.items():
-    print(f"Station: {station}, Message: {message}")
+# # Let's print the initial spacemail log
+# print("Initial Spacemail Log:")
+# for station, message in spacemail.items():
+#     print(f"Station: {station}, Message: {message}")
 
-# TODO: Add a new message from Station Delta and verify the updated spacemail log
-spacemail["Station Delta"] = "The new messege for your email log"
+# # TODO: Add a new message from Station Delta and verify the updated spacemail log
+# spacemail["Station Delta"] = "The new messege for your email log"
 
-print("New Spacemail Log:")
-for station, message in spacemail.items():
-    print(f"Station: {station}, Message: {message}")
+# print("New Spacemail Log:")
+# for station, message in spacemail.items():
+#     print(f"Station: {station}, Message: {message}")
+
+# TODO: Create a Python dictionary to serve as a hash table
+MyDci = {}
+# TODO: Add employee names with their roles to the dictionary
+MyDci['obi'] = 'employee1'
+MyDci['shar'] = 'employee2'
+MyDci['jaws'] = 'employee3'
+# TODO: Print the initial employee database
+print(MyDci)
+# TODO: Update the role of an employee in the database
+MyDci['shar'] = 'Fotografer'
+# TODO: Print the database after the employee role update
+print(MyDci)
+# TODO: Remove an employee from the database
+del MyDci['obi']
+# TODO: Print the final employee database after the removal
+print(MyDci)
