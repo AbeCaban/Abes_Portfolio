@@ -149,19 +149,49 @@
 # for station, message in spacemail.items():
 #     print(f"Station: {station}, Message: {message}")
 
-# TODO: Create a Python dictionary to serve as a hash table
-MyDci = {}
-# TODO: Add employee names with their roles to the dictionary
-MyDci['obi'] = 'employee1'
-MyDci['shar'] = 'employee2'
-MyDci['jaws'] = 'employee3'
-# TODO: Print the initial employee database
-print(MyDci)
-# TODO: Update the role of an employee in the database
-MyDci['shar'] = 'Fotografer'
-# TODO: Print the database after the employee role update
-print(MyDci)
-# TODO: Remove an employee from the database
-del MyDci['obi']
-# TODO: Print the final employee database after the removal
-print(MyDci)
+# # TODO: Create a Python dictionary to serve as a hash table
+# MyDci = {}
+# # TODO: Add employee names with their roles to the dictionary
+# MyDci['obi'] = 'employee1'
+# MyDci['shar'] = 'employee2'
+# MyDci['jaws'] = 'employee3'
+# # TODO: Print the initial employee database
+# print(MyDci)
+# # TODO: Update the role of an employee in the database
+# MyDci['shar'] = 'Fotografer'
+# # TODO: Print the database after the employee role update
+# print(MyDci)
+# # TODO: Remove an employee from the database
+# del MyDci['obi']
+# # TODO: Print the final employee database after the removal
+# print(MyDci)
+
+# import re
+# from collections import defaultdict
+
+# def rare_words_finder(text):
+#     thedic = {}
+    
+#     # Convert text to lowercase and split by single whitespaces
+#     words = text.lower().split()
+    
+#     # Count occurrences of each word
+    
+#     for word in words:
+#         thedic[word] = thedic.get(word, 0) + 1
+        
+#     # Sort words by frequency and maintain order
+    
+#     sorted_words = sorted(thedic, key=lambda x: (thedic[x], list(thedic.keys()).index(x)))
+    
+#     # Return the five least common words
+#     return sorted_words[:5]
+
+# print(rare_words_finder("Hey there hot shot Are you ready for a challenge This might be trickier than it looks"))
+
+# print(rare_words_finder("Hey there hot shot Are you ready for a challenge This might be trickier than it looks")) # Expected Output: [('hey', 1), ('there', 1), ('hot', 1), ('shot', 1), ('are', 1)]
+
+# print(rare_words_finder("The quick brown fox jumps over the lazy dog The fox is quick but the dog is lazy")) # Expected Output: [('brown', 1), ('jumps', 1), ('over', 1), ('but', 1), ('quick', 2)]
+
+# print(rare_words_finder("")) # Expected Output: []
+
