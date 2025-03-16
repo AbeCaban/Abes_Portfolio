@@ -165,7 +165,7 @@
 # del MyDci['obi']
 # # TODO: Print the final employee database after the removal
 # print(MyDci)
-
+# ---------------------------------------------------------------------------------
 # import re
 # from collections import defaultdict
 
@@ -209,3 +209,25 @@
 #         print("You are eligible for the local travel package.")
 # else:
 #     print("You are eligible for the children's travel package.")
+
+# ----------------------------------------------------------------------------------
+
+# # TODO: Define the budget for the cultural tour
+# budget = 5000
+# # TODO: Define the cost associated with each city visit
+# countries_cost = {"Germany" : 798, "Switzerland": 234, "Japan": 5687}
+# # TODO: Initialize the total amount spent and the list of chosen cities
+# money_spent = 0
+# countries_in_budget = []
+# # TODO: Use a while loop to selectively add cities to the tour list based on the budget
+# while money_spent < budget and countries_cost:
+#     countries, cost = countries_cost.popitem()
+# # Inside the loop:
+#     if money_spent + cost <= budget:
+#         money_spent += cost
+#         countries_in_budget.append(countries)
+#     # TODO: Retrieve a city and its associated cost
+#     # TODO: Check if adding this city would exceed your budget
+#         # TODO: If not, update the total spent and add the city to your list
+# print("The chosen hotels for this is: ", countries_in_budget)
+# # TODO: Print the list of cities chosen for the cultural tour
