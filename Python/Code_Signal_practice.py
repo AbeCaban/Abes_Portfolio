@@ -234,16 +234,17 @@
 
 # ----------------------------------------------------------------------------------
 # Organizing a travel guide for museums around the world.
-world_museums = {
-    "France": ["Louvre Museum", "Orsay Museum"],
-    "Italy": ["Uffizi Gallery", "Vatican Museums"],
-    "Spain": ["Prado Museum", "Reina Sofia Museum"],
-    "Japan": ["Tokyo National Museum", "Kyoto National Museum"]
-}
+# world_museums = {
+#     "France": ["Louvre Museum", "Orsay Museum"],
+#     "Italy": ["Uffizi Gallery", "Vatican Museums"],
+#     "Spain": ["Prado Museum", "Reina Sofia Museum"],
+#     "Japan": ["Tokyo National Museum", "Kyoto National Museum"]
+# }
 
-# TODO: Write a nested loop to print each country and its must-see museums in the format:
-for country, museums in world_museums.items():
-    print(f"In {country}, you should visit:")
-    for museum in museums:
-        print(" ", museum)
-        
+# # TODO: Write a nested loop to print each country and its must-see museums in the format:
+# for country, museums in world_museums.items():
+#     print(f"In {country}, you should visit:")
+#     for museum in museums:
+#         print(" ", museum)
+# -----------------------------------------------------------------------------------
+
