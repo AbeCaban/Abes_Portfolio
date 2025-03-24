@@ -231,3 +231,19 @@
 #         # TODO: If not, update the total spent and add the city to your list
 # print("The chosen hotels for this is: ", countries_in_budget)
 # # TODO: Print the list of cities chosen for the cultural tour
+
+# ----------------------------------------------------------------------------------
+# Organizing a travel guide for museums around the world.
+world_museums = {
+    "France": ["Louvre Museum", "Orsay Museum"],
+    "Italy": ["Uffizi Gallery", "Vatican Museums"],
+    "Spain": ["Prado Museum", "Reina Sofia Museum"],
+    "Japan": ["Tokyo National Museum", "Kyoto National Museum"]
+}
+
+# TODO: Write a nested loop to print each country and its must-see museums in the format:
+for country, museums in world_museums.items():
+    print(f"In {country}, you should visit:")
+    for museum in museums:
+        print(" ", museum)
+        
