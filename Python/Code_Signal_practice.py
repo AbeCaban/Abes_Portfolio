@@ -310,12 +310,28 @@
 # print(f"The total cost of the trip is: ${trip_cost}")
 
 # -----------------------------------------------------------------------------------
-# Our list of destinations
-travel_destinations = ["Paris", "Sydney", "Tokyo", "New York", "London"]
+# # Our list of destinations
+# travel_destinations = ["Paris", "Sydney", "Tokyo", "New York", "London"]
 
-# Todo: Insert "Berlin" at the third position using the insert() function
-travel_destinations.insert(4, "Berlin")
-travel_destinations.remove("New York")
+# # Todo: Insert "Berlin" at the third position using the insert() function
+# travel_destinations.insert(4, "Berlin")
+# travel_destinations.remove("New York")
 
-# Checking the list
-print(travel_destinations)
+# # Checking the list
+# print(travel_destinations)
+
+# -----------------------------------------------------------------------------------
+# The current planned countries to visit in the world tour
+world_tour_countries = ["Italy", "France", "USA", "Brazil", "India", "China"]
+the_other_list = ["one", "two"]
+# Adding new countries to visit at the end of the tour
+
+world_tour_countries.append("last")
+world_tour_countries.insert(3, "custon position")
+world_tour_countries.extend([the_other_list[1], the_other_list[0]])
+
+# world_tour_countries.append("Australia")
+# world_tour_countries.append("Spain")
+
+# print the updated tour plan.
+print(world_tour_countries)
